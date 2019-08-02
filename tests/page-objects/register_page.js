@@ -13,7 +13,7 @@ const welcomePage = {
   elements: {
     personalAccount: '[alt="personal"]',
     corporateAccount: '[alt="corporate"]',
-    nextButton: '[id="button"]',
+    nextButton: '#button_component-button',
     fillinfoPage: '.landing-page>div>form>div>div>div>span',
 
   },

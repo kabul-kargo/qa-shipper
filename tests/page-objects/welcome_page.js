@@ -6,8 +6,8 @@ const welcomePage = {
     return url;
   },
   elements: {
-    signInButton: '[id="login-button"]',
-    signUpButton: '[id="button"]',
+    signInButton: '#landing_page-login_button',
+    signUpButton: '#button_component-button',
     backButton: '[id="back-button"]',
     signUpPage: '.landing-page',
     signInPage: '.login-page',

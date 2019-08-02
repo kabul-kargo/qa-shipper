@@ -22,7 +22,7 @@ const fillInfoPersonalPage = {
     phoneField: '[name="phone"]',
     passwordField: '[name="name"]',
 
-    createAccountButton: '#button',
+    createAccountButton: '#button_component-button',
     showPassword: '#hide-button',
     tncButton: '#terms-and-conditions',
     verifyButton: '#button',
