@@ -7,10 +7,8 @@ services:
     ports:
       - "4444:4444"
     volumes:
-      - ".:/etc/selenoid/" # assumed current dir contains browsers.json
+      - "$PWD:/etc/selenoid/" # assumed current dir contains browsers.json
       - "/var/run/docker.sock:/var/run/docker.sock" 
-      - "/home/ubuntu/media:/media/upload"
-      - /./../onboard/tests/media1:/home/selenium/Downloads
     command: "-enable-file-upload"
   selenoid-ui:
     image: "aerokube/selenoid-ui"

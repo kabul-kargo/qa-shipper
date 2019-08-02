@@ -1,8 +1,3 @@
-/* eslint-disable linebreak-style */
-// eslint-disable-next-line no-unused-vars
-const env = require('dotenv').config();
-// eslint-disable-next-line no-unused-vars
-const { client } = require('nightwatch-cucumber');
 const base = require('bizzy-nightwatch-base-page');
 
 const welcomePage = {
@@ -11,19 +6,27 @@ const welcomePage = {
     return url;
   },
   elements: {
-    masukButton: '.jss29.cursor-pointer',
-    loginPage: '.login-page',
-
+    signInButton: '[id="login-button"]',
+    signUpButton: '[id="button"]',
+    backButton: '[id="back-button"]',
+    signUpPage: '.landing-page',
+    signInPage: '.login-page',
   },
   commands: [{
     navigateToPage() {
       this.navigate();
     },
-    assertLoginPage() {
-      return base.assertVisible(this, welcomePage.elements.loginPage);
+    assertSignInPage() {
+      return base.assertVisible(this, welcomePage.elements.signInPage);
     },
-    clickMasuk() {
-      base.clickSpanElement(this, welcomePage.elements.masukButton);
+    assertSignUpPage() {
+      return base.assertVisible(this, welcomePage.elements.signUpPage);
+    },
+    clickSignUp() {
+      base.clickButton(this, welcomePage.elements.signUpButton);
+    },
+    clickSignIn() {
+      base.clickSpanElement(this, welcomePage.elements.signInButton);
     },
   }],
 };

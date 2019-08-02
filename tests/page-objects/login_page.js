@@ -13,15 +13,21 @@ const loginPage = {
     telepon: '81218611736',
     password: 'Kargo123',
     muatTabTitle: 'Shipper - Kargo',
+    forgetPasswordPage: 'Lupa Password',
   },
   elements: {
     // form
     phoneField: '[name="PhoneNumber"]',
     passwordField: '[name="password"]',
+    // link (span)
+    forgetPassword: 'button>span>span',
     // button
     submitButton: '[type="submit"]',
-    // home page
+    // page
     homePage: '.home-page',
+    forgetPasswordPage: 'div>span',
+    // warning
+    warningMessage: 'form>div>div>div:nth-child(3)>div>span',
   },
   commands: [{
     navigateToPage() {
@@ -31,11 +37,26 @@ const loginPage = {
       base.setValueTextField(client, loginPage.elements.phoneField, loginPage.testData.telepon);
       base.setValueTextField(client, loginPage.elements.passwordField, loginPage.testData.password);
     },
+    fillPhoneField(phoneNumber) {
+      base.setValueTextField(client, loginPage.elements.phoneField, phoneNumber);
+    },
+    fillPasswordField(password) {
+      base.setValueTextField(client, loginPage.elements.passwordField, password);
+    },
+    clickForgetPassword() {
+      base.clickSpanElement(this, loginPage.elements.forgetPassword);
+    },
     clickMasukButton() {
       base.clickButton(this, loginPage.elements.submitButton);
     },
     assertMuatTab() {
       return base.assertVisible(this, loginPage.elements.homePage);
+    },
+    assertForgetPasswordPage() {
+      return base.assertSpanContainsText(this, loginPage.elements.forgetPasswordPage, loginPage.testData.forgetPasswordPage);
+    },
+    assertWarningMessage(warningMessage) {
+      return base.assertSpanContainsText(this, loginPage.elements.warningMessage, warningMessage);
     },
   }],
 };

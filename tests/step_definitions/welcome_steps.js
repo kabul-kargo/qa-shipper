@@ -7,10 +7,18 @@ Given(/^user is at welcome page$/, () => {
   return browser.navigateToPage();
 });
 
-When(/^user click Masuk button$/, () => {
-  return browser.clickMasuk();
+When(/^user click Sign In button$/, () => {
+  return browser.clickSignIn();
 });
 
-Then(/^user is on login page$/, async () => {
-  await browser.assertLoginPage();
+When(/^user click Sign Up button$/, () => {
+  return browser.clickSignUp();
+});
+
+Then(/^user is on Sign Up page$/, async () => {
+  await browser.assertSignUpPage();
+});
+
+Then(/^user is on Sign In page$/, async () => {
+  await browser.assertSignInPage();
 });

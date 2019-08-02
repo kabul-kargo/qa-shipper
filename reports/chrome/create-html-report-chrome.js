@@ -21,7 +21,7 @@ report.generate({
     data: [
       { label: 'Project', value: 'Nightwatch Automation' },
       { label: 'Written by', value: 'Kabul Dasa' },
-      { label: 'Repo', value: 'https://github.com/kabulDasa/sorabelTechAssessment' },
+      { label: 'Repo', value: 'https://github.com/kabulDasa/' },
     ],
   },
 });
