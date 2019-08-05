@@ -1,6 +1,9 @@
 Feature: Shipper Experience - profile page
 # Page load
 Background: Load profile page
+  Given user is at login page
+  When user fill every form correctly
+      And user click Masuk
   Given Shipper is at profile page
 
 @profile
@@ -10,15 +13,15 @@ Background: Load profile page
 ## TODO unique ID in name & account type
 
 @profile
-Scenario: As a Shipper I want to be able to change my password
-  When Shipper choose register company account
-    And Shipper click next
-  Then Shipper is on fillinfo company page
+# Scenario: As a Shipper I want to be able to change my password
+#   When Shipper choose register company account
+#     And Shipper click next
+#   Then Shipper is on fillinfo company page
 
-@profile
-Scenario: As a Shipper I want to be able to change my profile picture
-  When Shipper change their profile picture
-  Then Shipper profile picture is changed
+# @profile
+# Scenario: As a Shipper I want to be able to change my profile picture
+#   When Shipper change their profile picture
+#   Then Shipper profile picture is changed
 
 @profile
 Scenario: As a Shipper I want to be able to change my password
@@ -34,10 +37,10 @@ Scenario: As a Shipper I want to be able to change my language
 Scenario: As a Shipper I want to be able to see terms and conditions
   When Shipper click "profilePage.elements.termsAndCondition"
   Then Shipper is redirected to "profilePage.elements.termsAndConditionPage"
-@profile
-Scenario: As a Shipper I want to be able to log out
-  When Shipper click "profilePage.elements.logOut"
-  Then Shipper is logged out
+# @profile
+# Scenario: As a Shipper I want to be able to log out
+#   When Shipper click "profilePage.elements.logOut"
+#   Then Shipper is logged out
 
 # Scenario: As a Shipper I want to be able to go to daftar page
 #   When Shipper click Daftar button

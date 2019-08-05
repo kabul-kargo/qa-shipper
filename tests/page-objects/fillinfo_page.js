@@ -13,19 +13,19 @@ const fillInfoPersonalPage = {
   testData: {
     name: 'asd',
     email: '123@asd.asd',
-    phone: '82137014747',
+    phone: '83878766958',
     password: 'Kargo123',
   },
   elements: {
     nameField: '[name="name"]',
     emailField: '[name="email"]',
     phoneField: '[name="phone"]',
-    passwordField: '[name="name"]',
+    passwordField: '[name="password"]',
 
     createAccountButton: '#button_component-button',
     showPassword: '#hide-button',
     tncButton: '#terms-and-conditions',
-    verifyButton: '#button',
+    OTPField: '[name="registerCodeMobile"]',
   },
   commands: [{
     navigateToPage() {
@@ -56,7 +56,7 @@ const fillInfoPersonalPage = {
       base.clickButton(this, fillInfoPersonalPage.elements.tncButton);
     },
     assertOTPPage() {
-      return base.assertVisible(this, fillInfoPersonalPage.elements.verifyButton);
+      return base.assertVisible(this, fillInfoPersonalPage.elements.OTPField);
     },
   }],
 };

@@ -4,8 +4,8 @@ Background: Load fill info page
 
 Scenario: As a Shipper, I want to enter my additional Shipper information
   When user fill name field with "kargo"
-    And user fill email field with "kabul@kargo.tech"
-    And user fill phone field info with "82137014747"
+    And user fill email field with "axis@kargo.tech"
+    And user fill phone field info with "83878766958"
     And user fill password field info with "Kargo123"
     And user click create account button
   Then user is on OTP page

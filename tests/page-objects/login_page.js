@@ -24,7 +24,7 @@ const loginPage = {
     // button
     submitButton: '[type="submit"]',
     // page
-    homePage: '.home-page',
+    homePage: '.home-page>div>div>div',
     forgetPasswordPage: 'div>span',
     // warning
     warningMessage: 'form>div>div>div:nth-child(3)>div>span',
