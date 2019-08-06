@@ -13,6 +13,20 @@ Scenario: As a Shipper I want to be able to got to location picker (from)
   When Shipper click "#post_job_form-from_field"
   Then Shipper is redirected to "[placeholder='Cari kota']"
 
+Scenario: As a Shipper I want to be able to got to location picker (to)
+  Given Shipper is at home page
+  When Shipper click "#post_job_form-to_field"
+  Then Shipper is redirected to "[placeholder='Cari kota']"
+
+Scenario: As a Shipper I want to be able to got to date picker
+  Given Shipper is at home page
+  When Shipper click "#common_selector-button"
+  Then Shipper is redirected to ".react-calendar__navigation"
+
+Scenario: As a Shipper I want to be able to go to vehicle picker
+  Given Shipper is at home page
+  When Shipper click "#vehicle_selector-button"
+  Then Shipper is redirected to "#vehicle_type-button"
 
 @tab @quit 
 Scenario: As a Shipper I want to be able to go to jobs page

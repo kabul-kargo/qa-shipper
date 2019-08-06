@@ -1,5 +1,5 @@
 const { client } = require('nightwatch-cucumber');
-const { Given, When, Then } = require('cucumber');
+const { Given } = require('cucumber');
 
 const browser = client.page.home_page();
 
