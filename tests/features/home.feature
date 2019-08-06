@@ -1,27 +1,4 @@
 Feature: Shipper Experience - home (post-job) page
-# Page load
-# Background: Load profile page
-#   Given Shipper is at login page
-#   When Shipper fill every form correctly
-#       And Shipper click Masuk
-#       And Shipper click Tab "[href='/profile']"
-
-@profile
-# Scenario: As a Shipper I want to confirm my profile info
-#   When Shipper is at profile page
-#   Then Shipper is shown the correct credential
-## TODO unique ID in name & account type
-
-@profile
-# Scenario: As a Shipper I want to be able to change my password
-#   When Shipper choose register company account
-#     And Shipper click next
-#   Then Shipper is on fillinfo company page
-
-# @profile
-# Scenario: As a Shipper I want to be able to change my profile picture
-#   When Shipper change their profile picture
-#   Then Shipper profile picture is changed
 
 @tab
 Scenario: As a Shipper I want to be able to go to home page (post job)
@@ -31,36 +8,24 @@ Scenario: As a Shipper I want to be able to go to home page (post job)
       And Shipper click Tab "[href='/home']"
   Then Shipper is redirected to ".home-page"
 
-@tab
+@tab @quit
 Scenario: As a Shipper I want to be able to go to jobs page
-  # Given Shipper is at login page
-  # When Shipper fill every form correctly
-  #     And Shipper click Masuk
   When Shipper click Tab "[href='/jobs']"
   Then Shipper is redirected to "#tab_selector-tabs"
 
-@tab
+@tab @quit
 Scenario: As a Shipper I want to be able to go to shipments page
-  # Given Shipper is at login page
-  # When Shipper fill every form correctly
-  #     And Shipper click Masuk
-      And Shipper click Tab "[href='/shipments']"
+  When Shipper click Tab "[href='/shipments']"
   Then Shipper is redirected to "#tab_selector-tabs"
 
-@tab
+@tab @quit
 Scenario: As a Shipper I want to be able to go to notifications page
-  # Given Shipper is at login page
-  # When Shipper fill every form correctly
-  #     And Shipper click Masuk
-      And Shipper click Tab "[href='/notifications']"
+  When Shipper click Tab "[href='/notifications']"
   Then Shipper is redirected to "[alt='Notification']"
 
-@tab
+@tab @quit
 Scenario: As a Shipper I want to be able to go to profile page
-  # Given Shipper is at login page
-  # When Shipper fill every form correctly
-  #     And Shipper click Masuk
-      And Shipper click Tab "[href='/profile']"
+  When Shipper click Tab "[href='/profile']"
   Then Shipper is redirected to "#profile_common_button"
 
 # @profile @quit
