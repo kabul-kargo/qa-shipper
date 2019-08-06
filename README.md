@@ -83,13 +83,13 @@ and `page-object` accomodate things like page elements and the actual functions.
 This setup ensure that the `features` highly human readable and more technical thing contained within `page-object`. While ensuring reusability with `step_definition`, single responsibility principle is still being kept in the actual function itself.
 
 To run the automation test you need to:
- 1. install latest NVM and Node
+ 1. install latest NVM, Node, and Docker
  2. clone this repo
  3. install dependencies
 ```sh
 $ npm install
 ```
- 4. go to docker_config and run docker
+ 4. go to docker_config with selenoid image and run docker
  ```sh
 $ docker-compose start
 ```
@@ -108,6 +108,6 @@ while the test is running, selenoid UI should be accessible at http://127.0.0.1:
 After running the script at least once, report should  be available using  `npm run report-chrome`
  
  ---
-###### _feel free to further contact me regarding the test environment, running the automation sript, or any other part of this repo at dasa@riyatmaja.gmail.com_
+###### _feel free to further contact me regarding the test environment, running the automation sript, or any other part of this repo at kabul@kargo.tech_
 ---
 
