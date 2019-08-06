@@ -1,4 +1,4 @@
-Feature: Shipper Experience - profile page
+Feature: Shipper Experience - home (post-job) page
 # Page load
 # Background: Load profile page
 #   Given Shipper is at login page
@@ -33,36 +33,36 @@ Scenario: As a Shipper I want to be able to go to home page (post job)
 
 @tab
 Scenario: As a Shipper I want to be able to go to jobs page
-  Given Shipper is at login page
-  When Shipper fill every form correctly
-      And Shipper click Masuk
-      And Shipper click Tab "[href='/jobs']"
+  # Given Shipper is at login page
+  # When Shipper fill every form correctly
+  #     And Shipper click Masuk
+  When Shipper click Tab "[href='/jobs']"
   Then Shipper is redirected to "#tab_selector-tabs"
 
 @tab
 Scenario: As a Shipper I want to be able to go to shipments page
-  Given Shipper is at login page
-  When Shipper fill every form correctly
-      And Shipper click Masuk
+  # Given Shipper is at login page
+  # When Shipper fill every form correctly
+  #     And Shipper click Masuk
       And Shipper click Tab "[href='/shipments']"
   Then Shipper is redirected to "#tab_selector-tabs"
 
 @tab
 Scenario: As a Shipper I want to be able to go to notifications page
-  Given Shipper is at login page
-  When Shipper fill every form correctly
-      And Shipper click Masuk
+  # Given Shipper is at login page
+  # When Shipper fill every form correctly
+  #     And Shipper click Masuk
       And Shipper click Tab "[href='/notifications']"
   Then Shipper is redirected to "[alt='Notification']"
 
 @tab
 Scenario: As a Shipper I want to be able to go to profile page
-  Given Shipper is at login page
-  When Shipper fill every form correctly
-      And Shipper click Masuk
+  # Given Shipper is at login page
+  # When Shipper fill every form correctly
+  #     And Shipper click Masuk
       And Shipper click Tab "[href='/profile']"
   Then Shipper is redirected to "#profile_common_button"
-  
+
 # @profile @quit
 # Scenario: As a Shipper I want to be able to change my language
 #   Given Shipper is at profile page
