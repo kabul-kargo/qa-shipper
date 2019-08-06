@@ -42,7 +42,7 @@ const profilePage = {
       base.clickLinkText(this, link);
     },
     clickClickable(clickable) {
-      base.clickDivElement(this, clickable);
+      base.clickButton(this, clickable);
     },
     clickChangePassword() {
       base.clickDivElement(this, profilePage.elements.changePassword);

@@ -1,10 +1,10 @@
 Feature: Shipper Experience - profile page
 # Page load
-Background: Load profile page
-  Given user is at login page
-  When user fill every form correctly
-      And user click Masuk
-  Given Shipper is at profile page
+# Background: Load profile page
+#   Given Shipper is at login page
+#   When Shipper fill every form correctly
+#       And Shipper click Masuk
+#       And Shipper click Tab "[href='/profile']"
 
 @profile
 # Scenario: As a Shipper I want to confirm my profile info
@@ -25,18 +25,25 @@ Background: Load profile page
 
 @profile
 Scenario: As a Shipper I want to be able to change my password
-  When Shipper click "profilePage.elements.changePassword"
-  Then Shipper is redirected to "profilePage.elements.changePasswordPage"
+  Given Shipper is at login page
+  When Shipper fill every form correctly
+      And Shipper click Masuk
+      And Shipper click Tab "[href='/profile']"
+      And Shipper click "div>div:nth-child(3)>#profile_common_button"
+  Then Shipper is redirected to "[name='newPassword']"
 
-@profile
-Scenario: As a Shipper I want to be able to change my language
-  When Shipper click "profilePage.elements.changeLanguage"
-   Then Shipper is redirected to "profilePage.elements.changeLanguagePage"
+# @profile @quit
+# Scenario: As a Shipper I want to be able to change my language
+#   Given Shipper is at profile page
+#   When Shipper click "div:nth-child(5)>div>div:nth-child(1)>#profile_common_button"
+#   Then Shipper is redirected to "#language_selector-button"
 
-@profile
-Scenario: As a Shipper I want to be able to see terms and conditions
-  When Shipper click "profilePage.elements.termsAndCondition"
-  Then Shipper is redirected to "profilePage.elements.termsAndConditionPage"
+# @profile @quit
+# Scenario: As a Shipper I want to be able to see terms and conditions
+#   Given Shipper is at profile page
+#   When Shipper click "div:nth-child(5)>div>div:nth-child(2)>#profile_common_button"
+#   Then Shipper is redirected to ".dropdown-menu"
+  
 # @profile
 # Scenario: As a Shipper I want to be able to log out
 #   When Shipper click "profilePage.elements.logOut"

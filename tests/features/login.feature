@@ -1,15 +1,15 @@
 Feature: Shipper Experience - login page
 # Page load
 Background: Load Login page
-  Given user is at login page
+  Given Shipper is at login page
   
 
 #Login negative test - nomor telfon
-Scenario Outline: As a User I cannot login with incorrect phone number
-  When user fill phone number field with "<nomor telepon>"
-    And user fill password field with "Kargo123"
-    And user click Masuk 
-  Then user is given <warning message>
+Scenario Outline: As a Shipper I cannot login with incorrect phone number
+  When Shipper fill phone number field with "<nomor telepon>"
+    And Shipper fill password field with "Kargo123"
+    And Shipper click Masuk 
+  Then Shipper is given <warning message>
 
   Examples:
     | nomor telepon      |  warning message                    |
@@ -21,29 +21,29 @@ Scenario Outline: As a User I cannot login with incorrect phone number
     | 811440910          |  "Email atau nomor telepon Anda tidak terdaftar pada akun Kargo." |
 
   #Login negative test - password
-  Scenario: As a User I cannot login with incorrect password
-  When user fill phone number field with "81218611736"
-    And user fill password field with "asdasdasda"
-    And user click Masuk
-  Then user is given "Masukkan password yang benar"
+  Scenario: As a Shipper I cannot login with incorrect password
+  When Shipper fill phone number field with "81218611736"
+    And Shipper fill password field with "asdasdasda"
+    And Shipper click Masuk
+  Then Shipper is given "Masukkan password yang benar"
 
-  Scenario: As a User I cannot login with empty password
-  When user fill phone number field with "81218611736"
-    And user fill password field with "asdasdasda"
-    And user fill password field with ""
-    And user click Masuk
-  Then user is given "Masukkan password"
+  Scenario: As a Shipper I cannot login with empty password
+  When Shipper fill phone number field with "81218611736"
+    And Shipper fill password field with "asdasdasda"
+    And Shipper fill password field with ""
+    And Shipper click Masuk
+  Then Shipper is given "Masukkan password"
 
   #Forget password
-  Scenario: As a User I can go to forget password page
-    When user click forget password
-    Then user is on Forget Password page
+  Scenario: As a Shipper I can go to forget password page
+    When Shipper click forget password
+    Then Shipper is on Forget Password page
 
   #Login positive test
-  Scenario: As a User I can login with the correct info
-    When user fill every form correctly
-      And user click Masuk
-    Then user is on Muat tab
+  Scenario: As a Shipper I can login with the correct info
+    When Shipper fill every form correctly
+      And Shipper click Masuk
+    Then Shipper is on Muat tab
 
   
 #     TODO

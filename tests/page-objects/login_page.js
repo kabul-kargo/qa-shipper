@@ -10,7 +10,7 @@ const loginPage = {
     return url;
   },
   testData: {
-    telepon: '81218611736',
+    telepon: '82137014747',
     password: 'Kargo123',
     muatTabTitle: 'Shipper - Kargo',
     forgetPasswordPage: 'Lupa Password',
@@ -28,6 +28,12 @@ const loginPage = {
     forgetPasswordPage: 'div>span',
     // warning
     warningMessage: 'form>div>div>div:nth-child(3)>div>span',
+    // tab
+    profile: '[href="/profile"]',
+    notifications: '[href="/notifications"]',
+    shipments: '[href="/shipments"]',
+    jobs: '[href="/jobs"]',
+    home: '[href="/home"]',
   },
   commands: [{
     navigateToPage() {
@@ -47,7 +53,10 @@ const loginPage = {
       base.clickSpanElement(this, loginPage.elements.forgetPassword);
     },
     clickMasukButton() {
-      base.clickButton(this, loginPage.elements.submitButton);
+      return base.clickButton(this, loginPage.elements.submitButton);
+    },
+    clickTab(tab) {
+      return base.clickLinkText(this, tab);
     },
     assertMuatTab() {
       return base.assertVisible(this, loginPage.elements.homePage);

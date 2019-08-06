@@ -1,20 +1,20 @@
 Feature: Shipper Experience - register page
 # Page load
 Background: Load register page
-  Given user is at register page
+  Given Shipper is at register page
 
 @register
-Scenario: As a User I want to register personal account
-  When user choose register personal account
-    And user click next
-  Then user is on fillinfo personal page
+Scenario: As a Shipper I want to register personal account
+  When Shipper choose register personal account
+    And Shipper click next
+  Then Shipper is on fillinfo personal page
 @register
-Scenario: As a User I want to register company account
-  When user choose register company account
-    And user click next
-  Then user is on fillinfo company page
+Scenario: As a Shipper I want to register company account
+  When Shipper choose register company account
+    And Shipper click next
+  Then Shipper is on fillinfo company page
 
-# Scenario: As a User I want to be able to go to daftar page
-#   When user click Daftar button
-#   Then user is on daftar page
+# Scenario: As a Shipper I want to be able to go to daftar page
+#   When Shipper click Daftar button
+#   Then Shipper is on daftar page
   

@@ -3,26 +3,26 @@ const { Given, When, Then } = require('cucumber');
 
 const browser = client.page.register_page();
 
-Given(/^user is at register page$/, () => {
+Given(/^Shipper is at register page$/, () => {
   return browser.navigateToPage();
 });
 
-When(/^user choose register personal account$/, () => {
+When(/^Shipper choose register personal account$/, () => {
   return browser.clickPersonalAccount();
 });
 
-When(/^user choose register company account$/, () => {
+When(/^Shipper choose register company account$/, () => {
   return browser.clickCompanyAccount();
 });
 
-When(/^user click next$/, () => {
+When(/^Shipper click next$/, () => {
   return browser.clickNext();
 });
 
-Then(/^user is on fillinfo personal page$/, async () => {
+Then(/^Shipper is on fillinfo personal page$/, async () => {
   await browser.assertFillinfoPersonalPage();
 });
 
-Then(/^user is on fillinfo company page$/, async () => {
+Then(/^Shipper is on fillinfo company page$/, async () => {
   await browser.assertFillinfoCompanyPage();
 });

@@ -3,22 +3,22 @@ const { Given, When, Then } = require('cucumber');
 
 const browser = client.page.welcome_page();
 
-Given(/^user is at welcome page$/, () => {
+Given(/^Shipper is at welcome page$/, () => {
   return browser.navigateToPage();
 });
 
-When(/^user click Sign In button$/, () => {
+When(/^Shipper click Sign In button$/, () => {
   return browser.clickSignIn();
 });
 
-When(/^user click Sign Up button$/, () => {
+When(/^Shipper click Sign Up button$/, () => {
   return browser.clickSignUp();
 });
 
-Then(/^user is on Sign Up page$/, async () => {
+Then(/^Shipper is on Sign Up page$/, async () => {
   await browser.assertSignUpPage();
 });
 
-Then(/^user is on Sign In page$/, async () => {
+Then(/^Shipper is on Sign In page$/, async () => {
   await browser.assertSignInPage();
 });
