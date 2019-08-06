@@ -8,23 +8,33 @@ Scenario: As a Shipper I want to be able to go to home page (post job)
       And Shipper click Tab "[href='/home']"
   Then Shipper is redirected to ".home-page"
 
-@tab @quit
+Scenario: As a Shipper I want to be able to got to location picker (from)
+  Given Shipper is at home page
+  When Shipper click "#post_job_form-from_field"
+  Then Shipper is redirected to "[placeholder='Cari kota']"
+
+
+@tab @quit 
 Scenario: As a Shipper I want to be able to go to jobs page
+  Given Shipper is at home page
   When Shipper click Tab "[href='/jobs']"
   Then Shipper is redirected to "#tab_selector-tabs"
 
 @tab @quit
 Scenario: As a Shipper I want to be able to go to shipments page
+  Given Shipper is at home page
   When Shipper click Tab "[href='/shipments']"
   Then Shipper is redirected to "#tab_selector-tabs"
 
 @tab @quit
 Scenario: As a Shipper I want to be able to go to notifications page
+  Given Shipper is at home page
   When Shipper click Tab "[href='/notifications']"
   Then Shipper is redirected to "[alt='Notification']"
 
 @tab @quit
 Scenario: As a Shipper I want to be able to go to profile page
+  Given Shipper is at home page
   When Shipper click Tab "[href='/profile']"
   Then Shipper is redirected to "#profile_common_button"
 

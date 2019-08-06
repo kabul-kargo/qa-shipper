@@ -43,7 +43,7 @@ Scenario Outline: As a Shipper I cannot login with incorrect phone number
   Scenario: As a Shipper I can login with the correct info
     When Shipper fill every form correctly
       And Shipper click Masuk
-    Then Shipper is on Muat tab
+    Then Shipper is redirected to ".home-page"
 
   
 #     TODO
