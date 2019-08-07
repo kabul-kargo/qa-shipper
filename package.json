@@ -15,11 +15,10 @@
   "main": "nightwatch.conf.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/bizzyindonesia//nightwatch-mocha-poc-automation.git"
+    "url": "git+ssh://git@github.com:kabul-kargo/qa-shipper.git"
   },
-  "author": "SDET Kargo",
+  "author": "SDET KARGO",
   "license": "",
-  "homepage": "https://bitbucket.org/bizzyindonesia/nightwatch-mocha-poc-automation#readme",
   "dependencies": {
     "base64-file-encoder": "^1.4.1",
     "bizzy-nightwatch-base-page": "2.1.1",
