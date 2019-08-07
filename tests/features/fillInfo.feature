@@ -16,7 +16,7 @@ Scenario: As a Shipper (personal), I want to enter my additional Shipper informa
     And Shipper fill phone field info with "83878766958"
     And Shipper fill password field info with "Kargo123"
     And Shipper click create account button
-  Then Shipper is on OTP page
+  Then Shipper is redirected to "[name='registerCodeMobile']"
 
 Scenario: As a Shipper (company), I want to enter my additional Shipper information
   When Shipper fill name field with "kargo"
@@ -24,7 +24,7 @@ Scenario: As a Shipper (company), I want to enter my additional Shipper informat
     And Shipper fill phone field info with "83878766958"
     And Shipper fill password field info with "Kargo123"
     And Shipper click create account button
-  Then Shipper is on OTP page
+  Then Shipper is redirected to "[name='registerCodeMobile']"
 
   # BLOCKER : SIGNUP AND OTP TESTING WAITING FOR STABLE OTP PROVIDER
   # API for deleting newly created user

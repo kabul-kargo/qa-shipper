@@ -22,7 +22,7 @@ Scenario Outline: As a Shipper I cannot login with incorrect phone number
 
   #Login negative test - password
   Scenario: As a Shipper I cannot login with incorrect password
-  When Shipper fill phone number field with "81218611736"
+  When Shipper fill phone number field with "82137014747"
     And Shipper fill password field with "asdasdasda"
     And Shipper click Masuk
   Then Shipper is given "Masukkan password yang benar"
