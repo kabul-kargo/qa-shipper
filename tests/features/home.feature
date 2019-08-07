@@ -8,21 +8,25 @@ Scenario: As a Shipper I want to be able to go to home page (post job)
       And Shipper click Tab "[href='/home']"
   Then Shipper is redirected to ".home-page"
 
+@post_job
 Scenario: As a Shipper I want to be able to got to location picker (from)
   Given Shipper is at home page
   When Shipper click "#post_job_form-from_field"
   Then Shipper is redirected to "[placeholder='Cari kota']"
 
+@post_job
 Scenario: As a Shipper I want to be able to got to location picker (to)
   Given Shipper is at home page
   When Shipper click "#post_job_form-to_field"
   Then Shipper is redirected to "[placeholder='Cari kota']"
 
+@post_job
 Scenario: As a Shipper I want to be able to got to date picker
   Given Shipper is at home page
   When Shipper click "#common_selector-button"
   Then Shipper is redirected to ".react-calendar__navigation"
-
+  
+@post_job
 Scenario: As a Shipper I want to be able to go to vehicle picker
   Given Shipper is at home page
   When Shipper click "#vehicle_selector-button"
@@ -52,19 +56,7 @@ Scenario: As a Shipper I want to be able to go to profile page
   When Shipper click Tab "[href='/profile']"
   Then Shipper is redirected to "#profile_common_button"
 
-# @profile @quit
-# Scenario: As a Shipper I want to be able to change my language
-#   Given Shipper is at profile page
-#   When Shipper click "div:nth-child(5)>div>div:nth-child(1)>#profile_common_button"
-#   Then Shipper is redirected to "#language_selector-button"
 
-# @profile @quit
-# Scenario: As a Shipper I want to be able to see terms and conditions
-#   Given Shipper is at profile page
-#   When Shipper click "div:nth-child(5)>div>div:nth-child(2)>#profile_common_button"
-#   Then Shipper is redirected to ".dropdown-menu"
-  
-# @profile
 # Scenario: As a Shipper I want to be able to log out
 #   When Shipper click "profilePage.elements.logOut"
 #   Then Shipper is logged out

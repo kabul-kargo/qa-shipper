@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+ssh://git@bitbucket.org/bizzyindonesia//nightwatch-mocha-poc-automation.git"
   },
-  "author": "SDET Bizzy",
+  "author": "SDET Kargo",
   "license": "",
   "homepage": "https://bitbucket.org/bizzyindonesia/nightwatch-mocha-poc-automation#readme",
   "dependencies": {
