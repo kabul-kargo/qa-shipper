@@ -6,13 +6,13 @@ Feature: Shipper Experience - profile page
 #       And Shipper click Masuk
 #       And Shipper click Tab "[href='/profile']"
 
-@profile
+# @profile
 # Scenario: As a Shipper I want to confirm my profile info
 #   When Shipper is at profile page
 #   Then Shipper is shown the correct credential
-## TODO unique ID in name & account type
+# # TODO unique ID in name & account type
 
-@profile
+# @profile
 # Scenario: As a Shipper I want to be able to change my password
 #   When Shipper choose register company account
 #     And Shipper click next
