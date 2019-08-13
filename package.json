@@ -3,15 +3,15 @@
     "test": "npm run test-api",
     "test-docker-chrome": "node ./node_modules/nightwatch/bin/nightwatch --config docker-chrome-conf.js",
     "test-docker-firefox": "node ./node_modules/nightwatch/bin/nightwatch --config docker-firefox-conf.js",
-    "report-chrome": "node reports/chrome/create-html-report-chrome.js",
+    "report": "node reports/chrome/create-html-report-chrome.js",
     "report-firefox": "node reports/firefox/create-html-report-firefox.js",
     "start": "node modules/app.js",
     "test-api": "./node_modules/mocha/bin/mocha ./tests/api --recursive --reporter mochawesome --reporter-options reportDir=reports/mochawesome/ --timeout 30000",
     "start-api-test": "start-server-and-test http://localhost:12000"
   },
-  "name": "nightwatchjs-mocha-poc-automation",
+  "name": "kargo-aqa",
   "version": "1.0.0",
-  "description": "nightwatchjs mocha poc automation",
+  "description": "project-red-aqa",
   "main": "nightwatch.conf.js",
   "repository": {
     "type": "git",

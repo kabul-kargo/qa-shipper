@@ -20,9 +20,9 @@ report.generate({
   customData: {
     title: 'Run info',
     data: [
-      { label: 'Project', value: 'Nightwatch Automation' },
+      { label: 'Project', value: 'Project Red - AQA' },
       { label: 'Written by', value: 'Kabul Dasa' },
-      { label: 'Repo', value: 'https://github.com/kabulDasa/' },
+      { label: 'Repo', value: 'https://github.com/kabul-kargo' },
     ],
   },
 });
